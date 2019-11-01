@@ -1,0 +1,33 @@
+body,
+html {
+  min-width: $windowMinWidth;
+  font-family: $fontFamily;
+  background: color(white);
+}
+.container {
+  @include container();
+}
+h1 {
+  color: color(mainBg);
+  font-style: italic;
+  text-shadow: 2px 2px color(mainTitle), -2px -2px color(mainTitle), 2px -2px color(mainTitle), -2px 2px color(mainTitle);
+  @include font(1,8,20,sm);
+  @include margin(0,0);
+}
+h2{
+  color: color(mainTitle);
+  font-style: italic;
+  text-align: center;
+  @include font(2,8,10,sm);
+}
+h3 {
+  color: color(mainBg);
+  @include font(3, 8);
+}
+p {
+  color: color(mainTitle);
+  @include font(4, 8);
+}
+a {
+  @extend %decoration;
+}

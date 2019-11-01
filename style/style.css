@@ -1,0 +1,1889 @@
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  overflow: visible;
+  /* 2 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+  border-bottom: none;
+  /* 1 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub, sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button, input, optgroup, select, textarea {
+  margin: 0;
+  /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button, input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button, select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  display: table;
+  /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"], [type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  outline-offset: -2px;
+  /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  font: inherit;
+  /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.gridBox::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.start .titleBox .row .box .titleCross, .start .titleBox .row .box .titleCross::after, .start .titleBox .row .box .titleCross::before, .start .titleBox .row .box .titleCross.black::after, .start .titleBox .row .box .titleCross.black::before, .xSide .crossSide,
+.oSide .crossSide, .xSide .crossSide::after,
+.oSide .crossSide::after, .xSide .crossSide::before,
+.oSide .crossSide::before, .xSide .circleSide,
+.oSide .circleSide, .game main .row .box .circle, .game main .row .box .cross, .game main .row .box .cross::after, .game main .row .box .cross::before, .game .win .bigO, .game .win .bigX, .game .win .bigX::after, .game .win .bigX::before, .game .draw .xo, .game .draw .xo .smallX::after, .game .draw .xo .smallX::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+[class*='col'] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.col-1 {
+  width: calc(100% / 24 * 1 - 20px);
+}
+
+.col-2 {
+  width: calc(100% / 24 * 2 - 20px);
+}
+
+.col-3 {
+  width: calc(100% / 24 * 3 - 20px);
+}
+
+.col-4 {
+  width: calc(100% / 24 * 4 - 20px);
+}
+
+.col-5 {
+  width: calc(100% / 24 * 5 - 20px);
+}
+
+.col-6 {
+  width: calc(100% / 24 * 6 - 20px);
+}
+
+.col-7 {
+  width: calc(100% / 24 * 7 - 20px);
+}
+
+.col-8 {
+  width: calc(100% / 24 * 8 - 20px);
+}
+
+.col-9 {
+  width: calc(100% / 24 * 9 - 20px);
+}
+
+.col-10 {
+  width: calc(100% / 24 * 10 - 20px);
+}
+
+.col-11 {
+  width: calc(100% / 24 * 11 - 20px);
+}
+
+.col-12 {
+  width: calc(100% / 24 * 12 - 20px);
+}
+
+.col-13 {
+  width: calc(100% / 24 * 13 - 20px);
+}
+
+.col-14 {
+  width: calc(100% / 24 * 14 - 20px);
+}
+
+.col-15 {
+  width: calc(100% / 24 * 15 - 20px);
+}
+
+.col-16 {
+  width: calc(100% / 24 * 16 - 20px);
+}
+
+.col-17 {
+  width: calc(100% / 24 * 17 - 20px);
+}
+
+.col-18 {
+  width: calc(100% / 24 * 18 - 20px);
+}
+
+.col-19 {
+  width: calc(100% / 24 * 19 - 20px);
+}
+
+.col-20 {
+  width: calc(100% / 24 * 20 - 20px);
+}
+
+.col-21 {
+  width: calc(100% / 24 * 21 - 20px);
+}
+
+.col-22 {
+  width: calc(100% / 24 * 22 - 20px);
+}
+
+.col-23 {
+  width: calc(100% / 24 * 23 - 20px);
+}
+
+.col-24 {
+  width: calc(100% / 24 * 24 - 20px);
+}
+
+@media screen and (max-width: 1140px) {
+  .col-xl-1 {
+    width: calc(100% / 24 * 1 - 20px);
+  }
+  .col-xl-2 {
+    width: calc(100% / 24 * 2 - 20px);
+  }
+  .col-xl-3 {
+    width: calc(100% / 24 * 3 - 20px);
+  }
+  .col-xl-4 {
+    width: calc(100% / 24 * 4 - 20px);
+  }
+  .col-xl-5 {
+    width: calc(100% / 24 * 5 - 20px);
+  }
+  .col-xl-6 {
+    width: calc(100% / 24 * 6 - 20px);
+  }
+  .col-xl-7 {
+    width: calc(100% / 24 * 7 - 20px);
+  }
+  .col-xl-8 {
+    width: calc(100% / 24 * 8 - 20px);
+  }
+  .col-xl-9 {
+    width: calc(100% / 24 * 9 - 20px);
+  }
+  .col-xl-10 {
+    width: calc(100% / 24 * 10 - 20px);
+  }
+  .col-xl-11 {
+    width: calc(100% / 24 * 11 - 20px);
+  }
+  .col-xl-12 {
+    width: calc(100% / 24 * 12 - 20px);
+  }
+  .col-xl-13 {
+    width: calc(100% / 24 * 13 - 20px);
+  }
+  .col-xl-14 {
+    width: calc(100% / 24 * 14 - 20px);
+  }
+  .col-xl-15 {
+    width: calc(100% / 24 * 15 - 20px);
+  }
+  .col-xl-16 {
+    width: calc(100% / 24 * 16 - 20px);
+  }
+  .col-xl-17 {
+    width: calc(100% / 24 * 17 - 20px);
+  }
+  .col-xl-18 {
+    width: calc(100% / 24 * 18 - 20px);
+  }
+  .col-xl-19 {
+    width: calc(100% / 24 * 19 - 20px);
+  }
+  .col-xl-20 {
+    width: calc(100% / 24 * 20 - 20px);
+  }
+  .col-xl-21 {
+    width: calc(100% / 24 * 21 - 20px);
+  }
+  .col-xl-22 {
+    width: calc(100% / 24 * 22 - 20px);
+  }
+  .col-xl-23 {
+    width: calc(100% / 24 * 23 - 20px);
+  }
+  .col-xl-24 {
+    width: calc(100% / 24 * 24 - 20px);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .col-lg-1 {
+    width: calc(100% / 24 * 1 - 20px);
+  }
+  .col-lg-2 {
+    width: calc(100% / 24 * 2 - 20px);
+  }
+  .col-lg-3 {
+    width: calc(100% / 24 * 3 - 20px);
+  }
+  .col-lg-4 {
+    width: calc(100% / 24 * 4 - 20px);
+  }
+  .col-lg-5 {
+    width: calc(100% / 24 * 5 - 20px);
+  }
+  .col-lg-6 {
+    width: calc(100% / 24 * 6 - 20px);
+  }
+  .col-lg-7 {
+    width: calc(100% / 24 * 7 - 20px);
+  }
+  .col-lg-8 {
+    width: calc(100% / 24 * 8 - 20px);
+  }
+  .col-lg-9 {
+    width: calc(100% / 24 * 9 - 20px);
+  }
+  .col-lg-10 {
+    width: calc(100% / 24 * 10 - 20px);
+  }
+  .col-lg-11 {
+    width: calc(100% / 24 * 11 - 20px);
+  }
+  .col-lg-12 {
+    width: calc(100% / 24 * 12 - 20px);
+  }
+  .col-lg-13 {
+    width: calc(100% / 24 * 13 - 20px);
+  }
+  .col-lg-14 {
+    width: calc(100% / 24 * 14 - 20px);
+  }
+  .col-lg-15 {
+    width: calc(100% / 24 * 15 - 20px);
+  }
+  .col-lg-16 {
+    width: calc(100% / 24 * 16 - 20px);
+  }
+  .col-lg-17 {
+    width: calc(100% / 24 * 17 - 20px);
+  }
+  .col-lg-18 {
+    width: calc(100% / 24 * 18 - 20px);
+  }
+  .col-lg-19 {
+    width: calc(100% / 24 * 19 - 20px);
+  }
+  .col-lg-20 {
+    width: calc(100% / 24 * 20 - 20px);
+  }
+  .col-lg-21 {
+    width: calc(100% / 24 * 21 - 20px);
+  }
+  .col-lg-22 {
+    width: calc(100% / 24 * 22 - 20px);
+  }
+  .col-lg-23 {
+    width: calc(100% / 24 * 23 - 20px);
+  }
+  .col-lg-24 {
+    width: calc(100% / 24 * 24 - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .col-md-1 {
+    width: calc(100% / 24 * 1 - 20px);
+  }
+  .col-md-2 {
+    width: calc(100% / 24 * 2 - 20px);
+  }
+  .col-md-3 {
+    width: calc(100% / 24 * 3 - 20px);
+  }
+  .col-md-4 {
+    width: calc(100% / 24 * 4 - 20px);
+  }
+  .col-md-5 {
+    width: calc(100% / 24 * 5 - 20px);
+  }
+  .col-md-6 {
+    width: calc(100% / 24 * 6 - 20px);
+  }
+  .col-md-7 {
+    width: calc(100% / 24 * 7 - 20px);
+  }
+  .col-md-8 {
+    width: calc(100% / 24 * 8 - 20px);
+  }
+  .col-md-9 {
+    width: calc(100% / 24 * 9 - 20px);
+  }
+  .col-md-10 {
+    width: calc(100% / 24 * 10 - 20px);
+  }
+  .col-md-11 {
+    width: calc(100% / 24 * 11 - 20px);
+  }
+  .col-md-12 {
+    width: calc(100% / 24 * 12 - 20px);
+  }
+  .col-md-13 {
+    width: calc(100% / 24 * 13 - 20px);
+  }
+  .col-md-14 {
+    width: calc(100% / 24 * 14 - 20px);
+  }
+  .col-md-15 {
+    width: calc(100% / 24 * 15 - 20px);
+  }
+  .col-md-16 {
+    width: calc(100% / 24 * 16 - 20px);
+  }
+  .col-md-17 {
+    width: calc(100% / 24 * 17 - 20px);
+  }
+  .col-md-18 {
+    width: calc(100% / 24 * 18 - 20px);
+  }
+  .col-md-19 {
+    width: calc(100% / 24 * 19 - 20px);
+  }
+  .col-md-20 {
+    width: calc(100% / 24 * 20 - 20px);
+  }
+  .col-md-21 {
+    width: calc(100% / 24 * 21 - 20px);
+  }
+  .col-md-22 {
+    width: calc(100% / 24 * 22 - 20px);
+  }
+  .col-md-23 {
+    width: calc(100% / 24 * 23 - 20px);
+  }
+  .col-md-24 {
+    width: calc(100% / 24 * 24 - 20px);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .col-sm-1 {
+    width: calc(100% / 24 * 1 - 20px);
+  }
+  .col-sm-2 {
+    width: calc(100% / 24 * 2 - 20px);
+  }
+  .col-sm-3 {
+    width: calc(100% / 24 * 3 - 20px);
+  }
+  .col-sm-4 {
+    width: calc(100% / 24 * 4 - 20px);
+  }
+  .col-sm-5 {
+    width: calc(100% / 24 * 5 - 20px);
+  }
+  .col-sm-6 {
+    width: calc(100% / 24 * 6 - 20px);
+  }
+  .col-sm-7 {
+    width: calc(100% / 24 * 7 - 20px);
+  }
+  .col-sm-8 {
+    width: calc(100% / 24 * 8 - 20px);
+  }
+  .col-sm-9 {
+    width: calc(100% / 24 * 9 - 20px);
+  }
+  .col-sm-10 {
+    width: calc(100% / 24 * 10 - 20px);
+  }
+  .col-sm-11 {
+    width: calc(100% / 24 * 11 - 20px);
+  }
+  .col-sm-12 {
+    width: calc(100% / 24 * 12 - 20px);
+  }
+  .col-sm-13 {
+    width: calc(100% / 24 * 13 - 20px);
+  }
+  .col-sm-14 {
+    width: calc(100% / 24 * 14 - 20px);
+  }
+  .col-sm-15 {
+    width: calc(100% / 24 * 15 - 20px);
+  }
+  .col-sm-16 {
+    width: calc(100% / 24 * 16 - 20px);
+  }
+  .col-sm-17 {
+    width: calc(100% / 24 * 17 - 20px);
+  }
+  .col-sm-18 {
+    width: calc(100% / 24 * 18 - 20px);
+  }
+  .col-sm-19 {
+    width: calc(100% / 24 * 19 - 20px);
+  }
+  .col-sm-20 {
+    width: calc(100% / 24 * 20 - 20px);
+  }
+  .col-sm-21 {
+    width: calc(100% / 24 * 21 - 20px);
+  }
+  .col-sm-22 {
+    width: calc(100% / 24 * 22 - 20px);
+  }
+  .col-sm-23 {
+    width: calc(100% / 24 * 23 - 20px);
+  }
+  .col-sm-24 {
+    width: calc(100% / 24 * 24 - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col-xs-1 {
+    width: calc(100% / 24 * 1 - 20px);
+  }
+  .col-xs-2 {
+    width: calc(100% / 24 * 2 - 20px);
+  }
+  .col-xs-3 {
+    width: calc(100% / 24 * 3 - 20px);
+  }
+  .col-xs-4 {
+    width: calc(100% / 24 * 4 - 20px);
+  }
+  .col-xs-5 {
+    width: calc(100% / 24 * 5 - 20px);
+  }
+  .col-xs-6 {
+    width: calc(100% / 24 * 6 - 20px);
+  }
+  .col-xs-7 {
+    width: calc(100% / 24 * 7 - 20px);
+  }
+  .col-xs-8 {
+    width: calc(100% / 24 * 8 - 20px);
+  }
+  .col-xs-9 {
+    width: calc(100% / 24 * 9 - 20px);
+  }
+  .col-xs-10 {
+    width: calc(100% / 24 * 10 - 20px);
+  }
+  .col-xs-11 {
+    width: calc(100% / 24 * 11 - 20px);
+  }
+  .col-xs-12 {
+    width: calc(100% / 24 * 12 - 20px);
+  }
+  .col-xs-13 {
+    width: calc(100% / 24 * 13 - 20px);
+  }
+  .col-xs-14 {
+    width: calc(100% / 24 * 14 - 20px);
+  }
+  .col-xs-15 {
+    width: calc(100% / 24 * 15 - 20px);
+  }
+  .col-xs-16 {
+    width: calc(100% / 24 * 16 - 20px);
+  }
+  .col-xs-17 {
+    width: calc(100% / 24 * 17 - 20px);
+  }
+  .col-xs-18 {
+    width: calc(100% / 24 * 18 - 20px);
+  }
+  .col-xs-19 {
+    width: calc(100% / 24 * 19 - 20px);
+  }
+  .col-xs-20 {
+    width: calc(100% / 24 * 20 - 20px);
+  }
+  .col-xs-21 {
+    width: calc(100% / 24 * 21 - 20px);
+  }
+  .col-xs-22 {
+    width: calc(100% / 24 * 22 - 20px);
+  }
+  .col-xs-23 {
+    width: calc(100% / 24 * 23 - 20px);
+  }
+  .col-xs-24 {
+    width: calc(100% / 24 * 24 - 20px);
+  }
+}
+
+.gridBox [class*='col'] {
+  float: left;
+}
+
+.gridBox .float-r {
+  float: right;
+}
+
+.gridBox .col {
+  float: unset;
+}
+
+.flexBox .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.al-fn {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.al-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.al-s {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.jc-fn {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.jc-se {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.m-1 {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.m-2 {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.m-3 {
+  margin-top: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.m-4 {
+  margin-top: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.m-5 {
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+
+.mx-1 {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.mx-2 {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.mx-3 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.mx-4 {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.mx-5 {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.my-1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.my-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.my-3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.my-4 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.my-5 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-3 {
+  margin-top: 30px;
+}
+
+.mt-4 {
+  margin-top: 40px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.mr-2 {
+  margin-right: 20px;
+}
+
+.mr-3 {
+  margin-right: 30px;
+}
+
+.mr-4 {
+  margin-right: 40px;
+}
+
+.mr-5 {
+  margin-right: 50px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}
+
+.mb-4 {
+  margin-bottom: 40px;
+}
+
+.mb-5 {
+  margin-bottom: 50px;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.ml-2 {
+  margin-left: 20px;
+}
+
+.ml-3 {
+  margin-left: 30px;
+}
+
+.ml-4 {
+  margin-left: 40px;
+}
+
+.ml-5 {
+  margin-left: 50px;
+}
+
+.p-1 {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.p-2 {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.p-3 {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.p-4 {
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.p-5 {
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+
+.px-1 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.px-2 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.px-3 {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.px-4 {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.px-5 {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.py-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.py-2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py-3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.py-4 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.py-5 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.pt-1 {
+  padding-top: 10px;
+}
+
+.pt-2 {
+  padding-top: 20px;
+}
+
+.pt-3 {
+  padding-top: 30px;
+}
+
+.pt-4 {
+  padding-top: 40px;
+}
+
+.pt-5 {
+  padding-top: 50px;
+}
+
+.pr-1 {
+  padding-right: 10px;
+}
+
+.pr-2 {
+  padding-right: 20px;
+}
+
+.pr-3 {
+  padding-right: 30px;
+}
+
+.pr-4 {
+  padding-right: 40px;
+}
+
+.pr-5 {
+  padding-right: 50px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pb-3 {
+  padding-bottom: 30px;
+}
+
+.pb-4 {
+  padding-bottom: 40px;
+}
+
+.pb-5 {
+  padding-bottom: 50px;
+}
+
+.pl-1 {
+  padding-left: 10px;
+}
+
+.pl-2 {
+  padding-left: 20px;
+}
+
+.pl-3 {
+  padding-left: 30px;
+}
+
+.pl-4 {
+  padding-left: 40px;
+}
+
+.pl-5 {
+  padding-left: 50px;
+}
+
+body,
+html {
+  min-width: 320px;
+  font-family: "Roboto Condensed", sans-serif;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #ff6d70;
+  font-style: italic;
+  text-shadow: 2px 2px white, -2px -2px white, 2px -2px white, -2px 2px white;
+  font-size: 154px;
+  font-weight: 800;
+  line-height: 154px;
+  margin: 0px 0px 0px 0px;
+}
+
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size: 74px;
+    line-height: 74px;
+  }
+}
+
+h2 {
+  color: white;
+  font-style: italic;
+  text-align: center;
+  font-size: 100px;
+  font-weight: 800;
+  line-height: 100px;
+}
+
+@media only screen and (max-width: 540px) {
+  h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+h3 {
+  color: #ff6d70;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+}
+
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ff6d70;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 540px;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+.start {
+  background: black;
+}
+
+.start .titleBox {
+  width: 540px;
+  height: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 540px) {
+  .start .titleBox {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.start .titleBox .row {
+  width: 100%;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.start .titleBox .row .box {
+  position: relative;
+  max-width: 160px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start .titleBox .row .box .titleCircle {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border-top: 4px solid #ed494c;
+  border-right: 4px solid #ed494c;
+  border-bottom: 4px solid #ed494c;
+  border-left: 4px solid #ed494c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.start .titleBox .row .box .titleCircle .small {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border-top: 4px solid #ed494c;
+  border-right: 4px solid #ed494c;
+  border-bottom: 4px solid #ed494c;
+  border-left: 4px solid #ed494c;
+}
+
+.start .titleBox .row .box .titleCircle.red {
+  background: #ed494c;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.start .titleBox .row .box .titleCircle.red .small {
+  background: black;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.start .titleBox .row .box .titleCross {
+  width: 85%;
+  height: 85%;
+}
+
+.start .titleBox .row .box .titleCross::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 100%;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.start .titleBox .row .box .titleCross::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 15px;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.start .titleBox .row .box .titleCross.black::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 100%;
+  background: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+}
+
+.start .titleBox .row .box .titleCross.black::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  background: black;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+}
+
+.start .startBtn {
+  width: 100%;
+  border-radius: 8px;
+  background: white;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.start .startBtn h3 {
+  text-align: center;
+}
+
+.game {
+  background: #ff6d70;
+}
+
+.game header {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.game header .scoreBoard {
+  border-radius: 8px;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.xSide,
+.oSide {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #ed494c;
+  border-radius: 8px 0px 0px 8px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-right: 5px;
+}
+
+.xSide .crossSide,
+.oSide .crossSide {
+  width: 40px;
+  height: 40px;
+}
+
+.xSide .crossSide::after,
+.oSide .crossSide::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.xSide .crossSide::before,
+.oSide .crossSide::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.xSide .circleSide,
+.oSide .circleSide {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border-top: 4px solid white;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+}
+
+.oSide {
+  border-radius: 0px 8px 8px 0px;
+  background: black;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+
+body.oTurn .xSide {
+  background: black;
+}
+
+body.oTurn .oSide {
+  background: #ed494c;
+}
+
+.game header .scoreBoard .xScore,
+.game header .scoreBoard .oScore {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  height: 50px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game header .scoreBoard .xScore h3,
+.game header .scoreBoard .oScore h3 {
+  color: black;
+  text-align: center;
+}
+
+.game header .scoreBoard .vs {
+  width: 70px;
+  height: 60px;
+  background: #000;
+  border-radius: 8px 8px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -10px;
+}
+
+.game header .scoreBoard .vs p {
+  text-align: center;
+}
+
+.game header .turnShow {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+body.oTurn .turnShow p {
+  text-align: right;
+}
+
+.game main {
+  width: 540px;
+  height: 540px;
+}
+
+@media only screen and (max-width: 540px) {
+  .game main {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.game main .row {
+  height: 33%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game main .row:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #ed494c;
+}
+
+.game main .row .box {
+  position: relative;
+  width: 33%;
+  height: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.game main .row .box:hover {
+  background: rgba(204, 204, 204, 0.3);
+}
+
+.game main .row .box:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 5px;
+  background: #ed494c;
+}
+
+.game main .row .box .circle {
+  width: 45%;
+  height: 45%;
+  border-radius: 50%;
+  border-top: 8px solid black;
+  border-right: 8px solid black;
+  border-bottom: 8px solid black;
+  border-left: 8px solid black;
+}
+
+.game main .row .box .cross {
+  width: 50%;
+  height: 50%;
+}
+
+.game main .row .box .cross::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 100%;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game main .row .box .cross::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 8px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game .win {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game .win h1 {
+  position: relative;
+  z-index: 3;
+}
+
+.game .win .bigO {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  border: 30px solid #ed494c;
+}
+
+.game .win .bigX {
+  width: 80%;
+  height: 80%;
+}
+
+.game .win .bigX::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 100%;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game .win .bigX::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game .draw {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game .draw h1 {
+  position: relative;
+  z-index: 3;
+}
+
+.game .draw .xo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.game .draw .xo .smallO {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  border: 30px solid #ed494c;
+}
+
+.game .draw .xo .smallX {
+  width: 50%;
+  height: 50%;
+  position: relative;
+}
+
+.game .draw .xo .smallX::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 100%;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game .draw .xo .smallX::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: #ed494c;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.game .restartBtn {
+  width: 100%;
+  border-radius: 8px;
+  background: #ed494c;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.game .restartBtn.disable {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.game .restartBtn.disable h3 {
+  color: rgba(221, 221, 221, 0.5);
+}
+
+.game .restartBtn h3 {
+  color: white;
+  text-align: center;
+}

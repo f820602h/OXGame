@@ -1,0 +1,376 @@
+@import '../scss/main';
+
+$maxWidth: 540px;
+$maxWidthSm: 300px;
+
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: color(mainBg);
+  overflow: hidden;
+}
+
+.container {
+  max-width: $maxWidth;
+  width: 100%;
+  height: 100vh;
+  @include flexSet(c, c);
+  @include flexDir(c);
+  @include media(sm){
+    max-width: $maxWidthSm;
+  };
+}
+
+.start {
+  background: color(secondBg);
+  .titleBox{
+    width: $maxWidth;
+    height: $maxWidth;
+    @include flexSet(c,sb);
+    @include flexDir(c);
+    @include media(sm){
+      width: $maxWidthSm;
+      height: $maxWidthSm;
+    };
+    .row{
+      width: 100%;
+      height: 160px;
+      @include flexSet(c,sb);
+      .box {
+        position: relative;
+        max-width: 160px;
+        width: 100%;
+        height: 100%;
+        @include flexSet(c, c);
+        .titleCircle {
+          width: 80%;
+          height: 80%;
+          border-radius: 50%;
+          @include border(all, 4px, HLightColor);
+          @include flexSet(c, c);
+          .small {
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            @include border(all, 4px, HLightColor);
+          }
+          &.red {
+            background: color(HLightColor);
+            @include border(all, 4px, secondBg);
+            .small {
+              background: color(secondBg);
+              @include border(all, 4px, secondBg);
+            }
+          }
+        }
+        .titleCross {
+          width: 85%;
+          height: 85%;
+          @extend %positionCenter;
+          @include faker() {
+            width: 15px;
+            height: 100%;
+            background: color(HLightColor);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+          @include faker('', before) {
+            width: 100%;
+            height: 15px;
+            background: color(HLightColor);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+          &.black {
+            @include faker() {
+              width: 20px;
+              height: 100%;
+              background: color(secondBg);
+              transform: rotate(45deg);
+              @include border(all, 4px, thirdBg);
+              @extend %positionCenter;
+            }
+            @include faker('', before) {
+              width: 100%;
+              height: 20px;
+              background: color(secondBg);
+              transform: rotate(45deg);
+              @include border(all, 4px, thirdBg);
+              @extend %positionCenter;
+            }
+          }
+        }
+      }
+    }
+  }
+  .startBtn {
+    width: 100%;
+    border-radius: 8px;
+    background: color(thirdBg);
+    @include direct-margin(t,3);
+    @include direct-padding(y, 2);
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+.game {
+  background: color(mainBg);
+  header {
+    width: 100%;
+    @include direct-padding(t, 2);
+    .scoreBoard {
+      border-radius: 8px;
+      background: color(secondBg);
+      @include flexSet(c, sb);
+      @include border(all, 4px, secondBg);
+      @at-root .xSide,
+      .oSide {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: color(HLightColor);
+        border-radius: 8px 0px 0px 8px;
+        transition: .5s;
+        @include direct-margin(r, 0.5);
+        .crossSide {
+          width: 40px;
+          height: 40px;
+          @extend %positionCenter;
+          @include faker() {
+            width: 4px;
+            height: 100%;
+            background: color(thirdBg);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+          @include faker('', before) {
+            width: 100%;
+            height: 4px;
+            background: color(thirdBg);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+        }
+        .circleSide {
+          @include circle(35px);
+          @include border(all, 4px, thirdBg);
+          @extend %positionCenter;
+        }
+      }
+      @at-root .oSide {
+        border-radius: 0px 8px 8px 0px;
+        background: color(secondBg);
+        @include direct-margin(r, 0);
+        @include direct-margin(l, 0.5);
+      }
+      @at-root body.oTurn .xSide {
+        background: color(secondBg);
+      }
+      @at-root body.oTurn .oSide {
+        background: color(HLightColor);
+      }
+      .xScore,
+      .oScore {
+        flex: 1 1 0;
+        height: 50px;
+        background: color(thirdBg);
+        @include flexSet(c, c);
+        h3 {
+          color: color(secondBg);
+          text-align: center;
+        }
+      }
+      .vs {
+        width: 70px;
+        height: 60px;
+        background: #000;
+        border-radius: 8px 8px 0px 0px;
+        @include flexSet(c, c);
+        @include direct-margin(t, -1);
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .turnShow {
+      @include direct-margin(t, 1);
+      @include direct-margin(b, 2);
+      @at-root body.oTurn .turnShow p {
+        text-align: right;
+      }
+    }
+  }
+
+  main {
+    width: $maxWidth;
+    height: $maxWidth;
+    @include media(sm){
+      width: $maxWidthSm;
+      height: $maxWidthSm;
+    };
+    .row {
+      height: 33%;
+      position: relative;
+      @include flexSet(c, sb);
+      &:not(:last-child) {
+        @include faker() {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          border-radius: 5px;
+          background: color(HLightColor);
+        }
+      }
+      .box {
+        position: relative;
+        width: 33%;
+        height: 100%;
+        transition: .3s;
+        cursor: pointer;
+        &:hover{
+          background: color(gray3,0.3);
+        }
+        &:not(:last-child) {
+          @include faker() {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            border-radius: 5px;
+            background: color(HLightColor);
+          }
+        }
+        .circle {
+          width: 45%;
+          height: 45%;
+          border-radius: 50%;
+          @extend %positionCenter;
+          @include border(all, 8px, secondBg);
+        }
+        .cross {
+          width: 50%;
+          height: 50%;
+          @extend %positionCenter;
+          @include faker() {
+            width: 8px;
+            height: 100%;
+            background: color(thirdBg);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+          @include faker('', before) {
+            width: 100%;
+            height: 8px;
+            background: color(thirdBg);
+            transform: rotate(45deg);
+            @extend %positionCenter;
+          }
+        }
+      }
+    }
+  }
+
+  .win {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flexSet(c, c);
+    h1 {
+      position: relative;
+      z-index: 3;
+    }
+    .bigO {
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      border: 30px solid color(HLightColor);
+      @extend %positionCenter;
+    }
+    .bigX {
+      width: 80%;
+      height: 80%;
+      @extend %positionCenter;
+      @include faker() {
+        width: 45px;
+        height: 100%;
+        background: color(HLightColor);
+        transform: rotate(45deg);
+        @extend %positionCenter;
+      }
+      @include faker('', before) {
+        width: 100%;
+        height: 45px;
+        background: color(HLightColor);
+        transform: rotate(45deg);
+        @extend %positionCenter;
+      }
+    }
+  }
+
+  .draw {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flexSet(c, c);
+    @include flexDir(c);
+    h1 {
+      position: relative;
+      z-index: 3;
+    }
+    .xo {
+      width: 100%;
+      @extend %positionCenter;
+      @include flexSet(c, sa);
+      .smallO {
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        border: 30px solid color(HLightColor);
+      }
+      .smallX {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        @include faker() {
+          width: 30px;
+          height: 100%;
+          background: color(HLightColor);
+          transform: rotate(45deg);
+          @extend %positionCenter;
+        }
+        @include faker('', before) {
+          width: 100%;
+          height: 30px;
+          background: color(HLightColor);
+          transform: rotate(45deg);
+          @extend %positionCenter;
+        }
+      }
+    }
+  }
+  .restartBtn {
+    width: 100%;
+    border-radius: 8px;
+    background: color(HLightColor);
+    transition: .5s;
+    @include direct-margin(t, 3);
+    @include direct-padding(y, 2);
+    &.disable{
+      background: color(gray3, 0.5);
+      h3{
+        color: color(gray2, 0.5);
+      }
+    }
+    h3 {
+      color: color(thirdBg);
+      text-align: center;
+    }
+  }
+}

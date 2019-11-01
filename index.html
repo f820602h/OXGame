@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="start">
+      <div class="container">
+        <div class="titleBox">
+          <div class="row">
+            <div class="box"><h2>TIC</h2></div>
+            <div class="box">
+              <div class="red titleCircle">
+                <div class="small"></div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="black titleCross"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="box">
+              <div class="titleCross"></div>
+            </div>
+            <div class="box"><h2>TAC</h2></div>
+            <div class="box">
+              <div class="titleCircle">
+                <div class="small"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="box">
+              <div class="titleCircle">
+                <div class="small"></div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="titleCross"></div>
+            </div>
+            <div class="box"><h2>TOE</h2></div>
+          </div>
+        </div>
+        <a href="javascript:;" class="startBtn"><h3>START</h3></a>
+      </div>
+    </div>
+
+    <div class="game">
+      <div class="container">
+        <header>
+          <div class="scoreBoard">
+            <div class="xSide">
+              <div class="crossSide"></div>
+            </div>
+            <div class="xScore"><h3>0</h3></div>
+            <div class="vs"><p>vs</p></div>
+            <div class="oScore"><h3>0</h3></div>
+            <div class="oSide">
+              <div class="circleSide"></div>
+            </div>
+          </div>
+          <div class="turnShow">
+            <p>YOUR TURN!</p>
+          </div>
+        </header>
+        <main>
+          <div class="row">
+            <div class="box" data-num="0"><div></div></div>
+            <div class="box" data-num="1"><div></div></div>
+            <div class="box" data-num="2"><div></div></div>
+          </div>
+          <div class="row">
+            <div class="box" data-num="3"><div></div></div>
+            <div class="box" data-num="4"><div></div></div>
+            <div class="box" data-num="5"><div></div></div>
+          </div>
+          <div class="row">
+            <div class="box" data-num="6"><div></div></div>
+            <div class="box" data-num="7"><div></div></div>
+            <div class="box" data-num="8"><div></div></div>
+          </div>
+        </main>
+        <a href="javascript:;" class="restartBtn"><h3>RESTART</h3></a>
+      </div>
+
+      <div class="oWinTemplate" style="display:none">
+        <div class="win">
+          <div class="bigO"></div>
+          <h1>WINNER!</h1>
+        </div>
+      </div>
+
+      <div class="xWinTemplate" style="display:none">
+        <div class="win">
+          <div class="bigX"></div>
+          <h1>WINNER!</h1>
+        </div>
+      </div>
+
+      <div class="drawTemplate" style="display:none">
+        <div class="draw">
+          <h1>DRAW!</h1>
+          <h1>DRAW!</h1>
+          <h1>DRAW!</h1>
+          <div class="xo">
+            <div class="smallX"></div>
+            <div class="smallO"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
