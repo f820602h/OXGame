@@ -19,14 +19,15 @@ let whoWin = function() {
 	let winner = null
 	let lrCross = Math.abs( gamePlay[0] + gamePlay[4] + gamePlay[8] )
 	let rlCross = Math.abs( gamePlay[2] + gamePlay[4] + gamePlay[6] )
+	if( lrCross == 3 ) winner = gamePlay[0]
+	if( rlCross == 3 ) winner = gamePlay[2]
+
 	for (let i = 0; i < 3; i++) {
 		let row = Math.abs( gamePlay[3*i] + gamePlay[3*i+1] + gamePlay[3*i+2] )
 		let col = Math.abs( gamePlay[i] + gamePlay[i+3] + gamePlay[i+6] )
 		if( row == 3 ) winner = gamePlay[3*i]
 		if( col == 3 ) winner = gamePlay[i]
 	}
-	if( lrCross == 3 ) winner = gamePlay[0]
-	if( rlCross == 3 ) winner = gamePlay[2]
 	return winner
 }
 
@@ -34,15 +35,14 @@ let gameOver = function() {
 	step++
 	if (whoWin() == null && step == 9) {
 		$('main').html(drawTemplate)
-		return
-	} else if (whoWin() == null) {
-		switchTurn()
 	} else if (whoWin() == 1) {
 		oScore = oScore + 1
 		$('main').html(oWinTemplate)
 	} else if (whoWin() == -1) {
 		xScore = xScore + 1
 		$('main').html(xWinTemplate)
+	} else {
+		switchTurn()
 	}
 	localStorage.setItem('oScore', oScore)
 	localStorage.setItem('xScore', xScore)
@@ -74,7 +74,7 @@ $('main').on('click', '.box', function() {
 	else {
 		$(this).find('div').addClass(which)
 		gamePlay[index] = whichNum
-		gameOver() = which
+		gameOver()
 	}
 })
 
