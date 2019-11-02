@@ -15,23 +15,6 @@ let switchTurn = function() {
 	$('body').toggleClass('xTurn')
 }
 
-// let whoWin = function() {
-// 	let winner = null
-// 	for (let i = 0; i < 3; i++) {
-// 		if (gamePlay[3 * i] == gamePlay[3 * i + 1] && gamePlay[3 * i] == gamePlay[3 * i + 2]) {
-// 			winner = gamePlay[3 * i] != undefined ? gamePlay[3 * i] : winner
-// 		} else if (gamePlay[i] == gamePlay[i + 3] && gamePlay[i] == gamePlay[i + 6]) {
-// 			winner = gamePlay[i] != undefined ? gamePlay[i] : winner
-// 		}
-// 	}
-// 	if (gamePlay[0] == gamePlay[4] && gamePlay[0] == gamePlay[8]) {
-// 		winner = gamePlay[0] != undefined ? gamePlay[0] : winner
-// 	} else if (gamePlay[2] == gamePlay[4] && gamePlay[2] == gamePlay[6]) {
-// 		winner = gamePlay[2] != undefined ? gamePlay[2] : winner
-// 	}
-// 	return winner
-// }
-
 let whoWin = function() {
 	let winner = null
 	let lrCross = Math.abs( gamePlay[0] + gamePlay[4] + gamePlay[8] )
@@ -47,11 +30,11 @@ let whoWin = function() {
 	return winner
 }
 
-
 let gameOver = function() {
 	step++
 	if (whoWin() == null && step == 9) {
 		$('main').html(drawTemplate)
+		return
 	} else if (whoWin() == null) {
 		switchTurn()
 	} else if (whoWin() == 1) {
@@ -84,19 +67,15 @@ init()
 
 $('main').on('click', '.box', function() {
 	let index = $(this).data('num')
-	let which = 'circle'
-	let whichNum = 1
-	if (isCross) {
-		which = 'cross'
-		whichNum = -1
-	}
+	let which = isCross ? 'cross' : 'circle'
+	let whichNum = isCross ? -1 : 1
+	$('.restartBtn').removeClass('disable')
 	if (gamePlay[index] != undefined) return
 	else {
 		$(this).find('div').addClass(which)
 		gamePlay[index] = whichNum
-		gameOver()
+		gameOver() = which
 	}
-	$('.restartBtn').removeClass('disable')
 })
 
 $('.startBtn').on('click', function() {
