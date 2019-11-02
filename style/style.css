@@ -351,11 +351,7 @@ a {
   text-decoration: none;
 }
 
-.start .titleBox .row .box .titleCross, .start .titleBox .row .box .titleCross::after, .start .titleBox .row .box .titleCross::before, .start .titleBox .row .box .titleCross.black::after, .start .titleBox .row .box .titleCross.black::before, .xSide .crossSide,
-.oSide .crossSide, .xSide .crossSide::after,
-.oSide .crossSide::after, .xSide .crossSide::before,
-.oSide .crossSide::before, .xSide .circleSide,
-.oSide .circleSide, .game main .row .box .circle, .game main .row .box .cross, .game main .row .box .cross::after, .game main .row .box .cross::before, .game .win .bigO, .game .win .bigX, .game .win .bigX::after, .game .win .bigX::before, .game .draw .xo, .game .draw .xo .smallX::after, .game .draw .xo .smallX::before {
+.start .titleBox .row .box .titleCross, .start .titleBox .row .box .titleCross::after, .start .titleBox .row .box .titleCross::before, .start .titleBox .row .box .titleCross.black::after, .start .titleBox .row .box .titleCross.black::before, .xSide .crossSide, .oSide .crossSide, .xSide .crossSide::after, .oSide .crossSide::after, .xSide .crossSide::before, .oSide .crossSide::before, .xSide .circleSide, .oSide .circleSide, .game main .row .box .circle, .game main .row .box .cross, .game main .row .box .cross::after, .game main .row .box .cross::before, .game .win .bigO, .game .win .bigX, .game .win .bigX::after, .game .win .bigX::before, .game .draw .xo, .game .draw .xo .smallX::after, .game .draw .xo .smallX::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -1525,26 +1521,23 @@ body {
   border-left: 4px solid black;
 }
 
-.xSide,
-.oSide {
+.xSide, .oSide {
   position: relative;
   width: 50px;
   height: 50px;
-  background: #ed494c;
+  background: black;
   border-radius: 8px 0px 0px 8px;
   -webkit-transition: .5s;
   transition: .5s;
   margin-right: 5px;
 }
 
-.xSide .crossSide,
-.oSide .crossSide {
+.xSide .crossSide, .oSide .crossSide {
   width: 40px;
   height: 40px;
 }
 
-.xSide .crossSide::after,
-.oSide .crossSide::after {
+.xSide .crossSide::after, .oSide .crossSide::after {
   content: "";
   display: block;
   width: 4px;
@@ -1554,8 +1547,7 @@ body {
           transform: rotate(45deg);
 }
 
-.xSide .crossSide::before,
-.oSide .crossSide::before {
+.xSide .crossSide::before, .oSide .crossSide::before {
   content: "";
   display: block;
   width: 100%;
@@ -1565,8 +1557,7 @@ body {
           transform: rotate(45deg);
 }
 
-.xSide .circleSide,
-.oSide .circleSide {
+.xSide .circleSide, .oSide .circleSide {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1578,17 +1569,17 @@ body {
 
 .oSide {
   border-radius: 0px 8px 8px 0px;
-  background: black;
+  background: #ed494c;
   margin-right: 0px;
   margin-left: 5px;
 }
 
-body.oTurn .xSide {
-  background: black;
+body.xTurn .xSide {
+  background: #ed494c;
 }
 
-body.oTurn .oSide {
-  background: #ed494c;
+body.xTurn .oSide {
+  background: black;
 }
 
 .game header .scoreBoard .xScore,
@@ -1641,8 +1632,12 @@ body.oTurn .oSide {
   margin-bottom: 20px;
 }
 
-body.oTurn .turnShow p {
+.game header .turnShow p {
   text-align: right;
+}
+
+body.xTurn .turnShow p {
+  text-align: left;
 }
 
 .game main {

@@ -127,12 +127,11 @@ body {
       background: color(secondBg);
       @include flexSet(c, sb);
       @include border(all, 4px, secondBg);
-      @at-root .xSide,
-      .oSide {
+      @at-root .xSide, .oSide {
         position: relative;
         width: 50px;
         height: 50px;
-        background: color(HLightColor);
+        background: color(secondBg);
         border-radius: 8px 0px 0px 8px;
         transition: .5s;
         @include direct-margin(r, 0.5);
@@ -163,15 +162,15 @@ body {
       }
       @at-root .oSide {
         border-radius: 0px 8px 8px 0px;
-        background: color(secondBg);
+        background: color(HLightColor);
         @include direct-margin(r, 0);
         @include direct-margin(l, 0.5);
       }
-      @at-root body.oTurn .xSide {
-        background: color(secondBg);
-      }
-      @at-root body.oTurn .oSide {
+      @at-root body.xTurn .xSide {
         background: color(HLightColor);
+      }
+      @at-root body.xTurn .oSide {
+        background: color(secondBg);
       }
       .xScore,
       .oScore {
@@ -198,9 +197,12 @@ body {
     }
     .turnShow {
       @include direct-margin(t, 1);
-      @include direct-margin(b, 2);
-      @at-root body.oTurn .turnShow p {
-        text-align: right;
+		@include direct-margin(b, 2);
+		p{
+			text-align: right;
+		}
+      @at-root body.xTurn .turnShow p {
+        text-align: left;
       }
     }
   }
