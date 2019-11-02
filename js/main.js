@@ -22,11 +22,12 @@ let whoWin = function() {
 			winner = gamePlay[3 * i] != undefined ? gamePlay[3 * i] : winner
 		} else if (gamePlay[i] == gamePlay[i + 3] && gamePlay[i] == gamePlay[i + 6]) {
 			winner = gamePlay[i] != undefined ? gamePlay[i] : winner
-		} else if (gamePlay[0] == gamePlay[4] && gamePlay[0] == gamePlay[8]) {
-			winner = gamePlay[0] != undefined ? gamePlay[0] : winner
-		} else if (gamePlay[2] == gamePlay[4] && gamePlay[2] == gamePlay[6]) {
-			winner = gamePlay[2] != undefined ? gamePlay[2] : winner
 		}
+	}
+	if (gamePlay[0] == gamePlay[4] && gamePlay[0] == gamePlay[8]) {
+		winner = gamePlay[0] != undefined ? gamePlay[0] : winner
+	} else if (gamePlay[2] == gamePlay[4] && gamePlay[2] == gamePlay[6]) {
+		winner = gamePlay[2] != undefined ? gamePlay[2] : winner
 	}
 	return winner
 }
